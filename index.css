@@ -1,0 +1,228 @@
+.hidden{
+  display: none;
+}
+.done {
+  border: 3px solid #21476d;
+}
+.container {
+  width: 80%;
+  height: 60vh;
+  margin: 10vh auto;
+
+}
+.container h1 {
+  font-size: 5vh;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+.container .inner {
+  width: 85%;
+  margin: 30px auto;
+}
+.container .inner .add-form{
+  display: flex;
+  justify-content: center;
+}
+.container .inner .add-form #todo {
+  box-sizing: border-box;
+  width: 90%;
+  height: 11vh;
+  border-radius: 10px;
+  padding-left: 15px;
+}
+.container .inner .add-form #add-button{
+  background-color: #4170B6;
+  border-radius: 10px;
+  height: 11vh;
+  width: 10%;
+  color: #F5F5F7;
+  margin-left: 5px;
+}
+.container .inner .button-box {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+.container .inner .button-box button {
+  padding: 10px 20px;
+  background-color: #21476d;
+  color: #F5F5F7;
+  border-radius: 10px;
+}
+.container .inner #todo-list{
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.container .inner #todo-list .todo{
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #F5F5F7;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.completeTodo{
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #F5F5F7;
+  border-radius: 10px;
+  padding: 20px 30px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.incompleteTodo{
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #F5F5F7;
+  border-radius: 10px;
+  padding: 20px 30px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .inner #todo-list .todo .btn-box {
+  display: flex;
+  gap: 10px;
+}
+.container .inner #todo-list .todo .btn-box .x-btn{
+  color: #6E6E73;
+}
+.container .inner #todo-list .todo .btn-box .modify-btn{
+  background-color: #6E6E73;
+  border-radius: 10px;
+  padding: 10px;
+  color: #F5F5F7;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.modal .bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.modal-box{
+  z-index: 1;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  width: 50%;
+  height: 25vh;
+  border-radius: 10px;
+  background-color: #F5F5F7;
+  box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+}
+
+.modal-box .inner{
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-box .inner h1{
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.modal-box .inner .modify-form{
+  margin-top: 10px;
+  width: 100%;
+}
+.modal-box .inner .modify-form #modify-input{
+  box-sizing: border-box;
+  width: 60%;
+  height: 6vh;
+  padding-left: 10px;
+  border-radius: 10px;
+}
+.modal-box .inner .modify-form #submit-cancel{
+  background-color: #6E6E73;
+  border-radius: 10px;
+  width: 5vw;
+  height: 6vh;
+  color: #F5F5F7;
+}
+.modal-box .inner .modify-form #submit-modify{
+  width: 5vw;
+  height: 6vh;
+  background-color: #4170B6;
+  color: #F5F5F7;
+  border-radius: 10px;
+}
+.bg{
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+}
+.loader-container{
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+}
+.loader-container .loader {
+   position: relative; 
+} 
+
+.loader-container .loader::before, .loader::after{
+  content: '';
+  width: 1.8em;
+  height: 1.8em;
+  position: absolute;
+  border-radius: 4em;
+}
+
+.loader-container .loader::before{
+  background: #347AD4;
+  left: 0;
+  transform: translateX(10px);
+  animation: Moveleft 1s ease infinite;
+}
+
+.loader-container .loader::after{
+  background-color: #032a52;
+  right: 0;
+  transform: translateX(-10px);
+  animation: Moveright 1s ease infinite;
+}
+
+@keyframes Moveright{
+  0%{
+    transform: translateX(-10px);
+  }
+  50%{
+    transform: translateX(10px);
+    background: #3479d497;
+  }
+  100%{
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes Moveleft{
+  0%{
+    transform: translateX(10px);
+  }
+  50%{
+    transform: translateX(-10px);
+    background: #032b5285;
+  }
+  100%{
+    transform: translateX(10px);
+  }
+}
+

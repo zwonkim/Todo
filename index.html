@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="./reset.css">
+  <script defer src='./index.js'></script>
+</head>
+<body>
+  <div class='container'>
+    <h1>To Do List</h1>
+    <div class="inner">
+      <form action="" class='add-form'>
+        <input id='todo' type="text" placeholder='할 일을 입력하세요'>
+        <button id='add-button' type='button'>추가</button>
+      </form>
+      <div class="button-box">
+        <button class="show-all">Show All</button>
+        <button class="completed">Show Completed</button>
+        <button class="incomplete">Show Incomplete</button>
+      </div>
+      <div class="loader-container hidden">
+        <div class="loader"></div>
+      </div>
+      <ul id='todo-list'>
+      </ul>
+    </div>
+  </div>
+  <div class="modal hidden">
+    <div class="bg"></div>
+    <div class="modal-box">
+      <div class="inner">
+        <h1>수정할 내용을 입력하세요</h1>
+        <form class='modify-form' action="">
+          <input id='modify-input' type="text" placeholder='수정할 내용을 입력하세요'>
+          <button id='submit-cancel'>취소</button>
+          <button id='submit-modify'>수정</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
